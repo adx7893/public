@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotiweb</title>
+  <link rel="stylesheet" href="css/genre_img.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkbox_styles.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <section class="header">
+    <nav>
+    <p style="color: white;">Show Playlist</p>
+      <div class="checkbox-wrapper-63">
+        <label class="switch" for="show-playlist-checkbox">
+          <input type="checkbox" id="show-playlist-checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="right-links">
+        <a class="left-icon" href=""><img src="images/1.png"></a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div class="search-container">
+          <form onsubmit="searchGenres(); return false;">
+            <input type="text" id="search-input" placeholder="Search genre..." onkeyup="searchGenres()">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <button class="reset-button" onclick="resetFields()">Reset</button>
+      </div>
+    </nav>
+    <div class="background"></div>
+    <div class="content">
+    </div>
+    <h2>Genres fetched from Spotify</h2>
+    <div id="genre-container"></div>
+    <div id="playlist-container" style="display: none;"></div>
+    <h2 id="playlist-heading"></h2>
+    <ul id="track-list"></ul>
+  </section>
+</body>
+</html>
